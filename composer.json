@@ -1,12 +1,12 @@
 {
-  "name": "taciclei/cake-swagger",
-  "description": "Swagger plugin for CakePHP v3",
+  "name": "Devin345458/cake-swagger",
+  "description": "Swagger plugin for CakePHP v4",
   "type": "cakephp-plugin",
   "license": "MIT",
   "authors": [
     {
-      "name": "taciclei",
-      "email": "souza@taciclei.com"
+      "name": "Devin345458",
+      "email": "hollistergraham123@gmail.com"
     }
   ],
   "require": {
