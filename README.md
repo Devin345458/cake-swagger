@@ -2,11 +2,11 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt)
 
-`CakePHP 3.x` plugin that dinamically adds auto-generated Swagger documentation to your projects using `swagger-php` and `swagger-ui 3.x`
+`CakePHP 4.x` plugin that dinamically adds auto-generated Swagger documentation to your projects using `swagger-php` and `swagger-ui 3.x`
 
 ## Requirements
 
-* CakePHP 3.0+
+* CakePHP 4.0+
 * Some [swagger-php](https://github.com/zircote/swagger-php) annotation knowledge
 
 ## Installation
@@ -14,19 +14,19 @@
 1. Install the plugin using composer:
 
     ```bash
-    composer require aymard-pro/cake-swagger:dev-master
+    composer require devin345458/cake-swagger:dev-master
     ```
 
 2. To enable the plugin either run the following command:
 
     ```bash
-    bin/cake plugin load CakeSwagger --routes --bootstrap
+    bin/cake plugin load CakeSwagger
     ```
 
     or manually add the following line to your `config/bootstrap.php` file:
 
     ```bash
-    Plugin::load('CakeSwagger', ['routes' => true, 'bootstrap' => true]);
+    Application::load('CakeSwagger');
     ```
 
 3. Create the configuration file `/config/cake-swagger.php` if not exists. See #Configuration section
