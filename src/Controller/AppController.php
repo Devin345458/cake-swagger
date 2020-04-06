@@ -11,17 +11,17 @@ use CakeSwagger\Exception\CakeSwaggerException;
 
 class AppController extends BaseController
 {
-	
+
 	/**
 	 * @var array that will hold merged configuration settings.
 	 */
 	protected $config = [];
-	
+
 	/**
 	 * @var array that will hold merged options settings.
 	 */
 	protected $options = [];
-	
+
 	/**
 	 * @var array holding required default configuration settings.
 	 */
@@ -33,14 +33,14 @@ class AppController extends BaseController
 			'path' => '/api'
 		]
 	];
-	
+
 	/**
 	 * Initialize
 	 */
-	public function initialize()
+	public function initialize(): void
 	{
 		parent::initialize();
-		
+
 		if (Configure::check('CakeSwagger')) {
 			$this->config = Hash::merge(static::$defaultConfig, Configure::read('CakeSwagger'));
 		}
@@ -57,7 +57,7 @@ class AppController extends BaseController
 			$this->options['exclude'] = $this->config['exclude'];
 		}
 	}
-	
+
 	/**
 	 * @param Event $event
 	 * @return \Cake\Http\Response|null|void
@@ -66,10 +66,10 @@ class AppController extends BaseController
 	public function beforeFilter(Event $event)
 	{
 		parent::beforeFilter($event);
-		
+
 		$this->viewBuilder()->setLayout('CakeSwagger.default');
 	}
-	
+
 	/**
 	 * @param Event $event
 	 */
@@ -77,5 +77,5 @@ class AppController extends BaseController
 	{
 		parent::beforeRender($event);
 	}
-	
+
 }
