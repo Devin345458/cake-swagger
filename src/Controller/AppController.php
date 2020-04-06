@@ -63,7 +63,7 @@ class AppController extends BaseController
 	 * @return \Cake\Http\Response|null|void
 	 * @throws \CakeSwagger\Exception\CakeSwaggerException
 	 */
-	public function beforeFilter(Event $event)
+	public function beforeFilter(Event $event): void
 	{
 		parent::beforeFilter($event);
 
@@ -73,7 +73,7 @@ class AppController extends BaseController
 	/**
 	 * @param Event $event
 	 */
-	public function beforeRender(Event $event)
+	public function beforeRender(Event $event): void
 	{
 		parent::beforeRender($event);
 	}
