@@ -53,6 +53,7 @@ class UiController extends AppController
         'action' => 'json'
       ], true);
 
+    $this->viewBuilder()->setLayout('CakeSwagger.default');
     $this->set(compact('url'));
   }
 
