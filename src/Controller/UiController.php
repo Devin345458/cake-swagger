@@ -45,6 +45,7 @@ class UiController extends AppController
    */
   public function index()
   {
+    $this->viewBuilder()->setLayout('CakeSwagger.default');
     $url = array_key_exists('directory', $this->config) && empty($this->config['directory']) ?
       'http://petstore.swagger.io/v2/swagger.json' :
       Router::url([
@@ -53,7 +54,6 @@ class UiController extends AppController
         'action' => 'json'
       ], true);
 
-    $this->viewBuilder()->setLayout('CakeSwagger.default');
     $this->set(compact('url'));
   }
 
