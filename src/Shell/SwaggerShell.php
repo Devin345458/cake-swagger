@@ -2,6 +2,7 @@
 
 namespace CakeSwagger\Shell;
 
+use Cake\Console\ConsoleOptionParser;
 use CakeSwagger\Controller\AppController;
 use CakeSwagger\Lib\SwaggerTools;
 use Cake\Console\Shell;
@@ -17,7 +18,7 @@ class SwaggerShell extends Shell
      * @return \Cake\Console\ConsoleOptionParser
      * @throws \Aura\Intl\Exception
      */
-    public function getOptionParser()
+    public function getOptionParser(): ConsoleOptionParser
     {
         $parser = parent::getOptionParser();
         $parser->addSubcommand('makedocs', [
